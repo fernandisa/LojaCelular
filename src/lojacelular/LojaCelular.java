@@ -14,14 +14,18 @@ public class LojaCelular {
         
         Fabricante fabricante1 = new Fabricante ();
         
-        fabricante1.setNome("Android");
-        fabricante1.setDatafund("20/11/1990");
+        fabricante1.setNome("Samsung");
+        fabricante1.setDatafund("15/08/1970");
        
         Pais país1 = new Pais ();
+        país1.setNome("Coreia do Sul");
+        país1.setCapital("Seul");
+        país1.setHabitantes(12000000.0);
         
-        país1.setNome("China");
-        país1.setCapital("Pequim");
-        país1.setHabitantes(1375000000.0);
+        fabricante1.setPais(país1);
+        
+        modelo1.setFabricante(fabricante1);
+        
         
         // SIII
         
@@ -37,9 +41,13 @@ public class LojaCelular {
         fabricante2.setDatafund("15/08/1970");
        
         Pais país2 = new Pais ();
-        país2.setNome("Coréia do Sul");
+        país2.setNome("Coreia do Sul");
         país2.setCapital("Seul");
         país2.setHabitantes(12000000.0);
+        
+        
+        fabricante2.setPais(país2);
+        modelo2.setFabricante(fabricante2);
         
         // Iphone 6
         
@@ -59,14 +67,20 @@ public class LojaCelular {
         país3.setCapital("Washington");
         país3.setHabitantes(3189000000.0);
         
+        fabricante3.setPais(país3);
+        modelo3.setFabricante(fabricante3);
+        
+             
         
         JOptionPane.showMessageDialog(null, "Modelo:" + modelo1.getNome() + "\nFabricante:\nNome:" + modelo1.getFabricante().getNome() + 
                 "\nPaís de origem:"
-                + modelo1.getFabricante().getPais() +  "Modelo:" + modelo2.getNome() + "\nFabricante:\nNome:" + modelo2.getFabricante().getNome() 
+                + modelo1.getFabricante().getPais().getNome() +  "\nModelo:" + modelo2.getNome() + "\nFabricante:\nNome:" + 
+                modelo2.getFabricante().getNome() 
                 + "\nPaís de origem:"
-                + modelo2.getFabricante().getPais() +  "Modelo:" + modelo3.getNome() + "\nFabricante:\nNome:" + modelo3.getFabricante().getNome() 
+                + modelo2.getFabricante().getPais().getNome() +  "\nModelo:" + modelo3.getNome() + "\nFabricante:\nNome:" + 
+                modelo3.getFabricante().getNome() 
                 + "\nPaís de origem:"
-                + modelo3.getFabricante().getPais() );
+                + modelo3.getFabricante().getPais().getNome() );
 
         
         
